@@ -1,15 +1,14 @@
 import 'package:hive/hive.dart';
 
-part 'task.g.dart'; // This is necessary for the build_runner to generate the Hive adapter
+part 'task.g.dart'; // For Hive adapter generation
 
-@HiveType(typeId: 0) // Unique identifier for the Task model in Hive
+@HiveType(typeId: 0)
 class Task {
-  @HiveField(0) // Marks the field to be stored in Hive
+  @HiveField(0)
   final String title;
 
-  @HiveField(1) // Marks the field to be stored in Hive
+  @HiveField(1)
   final DateTime reminderTime;
 
-  // Constructor for the Task class
   Task({required this.title, required this.reminderTime});
 }
