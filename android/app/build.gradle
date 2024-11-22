@@ -1,0 +1,20 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'  // Add this line to apply the Firebase services plugin
+}
+
+
+android {
+    compileSdk 33  // Ensure your compile SDK version is compatible with Firebase
+    ...
+}
+
+dependencies {
+    // Firebase BoM (Bill of Materials)
+    implementation platform('com.google.firebase:firebase-bom:33.6.0')  // Firebase BOM ensures you're using compatible versions of all Firebase SDKs
+    
+    // Example Firebase services (Firebase Analytics)
+    implementation 'com.google.firebase:firebase-analytics'  // Add more services based on your needs, e.g., Firestore, Auth
+}
+
+
